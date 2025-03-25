@@ -14,3 +14,9 @@ TEST_CASE("Function pointer calls correctly") {
     callFunctionPointer(testFunction, 5);
     REQUIRE(wasCalled);
 }
+
+TEST_CASE("extractBytes extracts correct bytes") {
+    double testValue = 123.456;
+    auto extracted = extractBytes(testValue);
+    REQUIRE(extracted.size() == 4);
+}
